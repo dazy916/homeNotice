@@ -1,0 +1,19 @@
+/* pages/warehouse/warehouse.wxss */
+.proimg{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.probox{
+  margin: 20rpx;
+  font-size: 28rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #ebebeb;
+  padding: 20rpx;
+}
+.probox .title{
+  font-weight: bold;
+  font-size: 30rpx;
+
+}

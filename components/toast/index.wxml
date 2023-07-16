@@ -1,0 +1,16 @@
+<view class="i-toast-mask" wx:if="{{ visible && mask }}" bindtap="handleHide"></view>
+<view class="i-class i-toast" wx:if="{{ visible }}">
+    <block wx:if="{{ type !== 'default' }}">
+        <view class="i-toast-type">
+            <van-icon name="passed" size="28" wx:if="{{ type === 'success' }}" />
+            <van-icon name="warning-o" size="28" wx:elif="{{ type === 'warning' }}" />
+            <van-icon name="close" size="28" wx:elif="{{ type === 'error' }}" />
+            <view class="i-toast-icon i-toast-loading" wx:elif="{{ type === 'loading' }}"></view>
+        </view>
+    </block>
+    <block wx:else>
+        <van-icon i-class="i-toast-icon" size="28" name="{{ icon==='success'?'passed':(icon==='warning'?'warning-o':'close') }}" wx:if="{{ icon }}"></van-icon>
+        <image class="i-toast-image" src="{{ image }}" wx:if="{{ image }}" mode="aspectFit"></image>
+    </block>
+    <view class="i-toast-content" wx:if="{{ content }}">{{ content }}</view>
+</view>

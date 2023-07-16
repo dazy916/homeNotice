@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> 
+</view>-->
+<swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{dutation}}" current="{{current}}" bindanimationfinish="bannerChange">
+  <swiper-item wx:for="{{imgUrls}}" wx:key="index">
+    <van-image class="banner-item" width="100%" height="400rpx" src="{{item.imageUrl}}" fit="cover" bind:click="imageLoad" data-item="{{item.linkUrl}}" />
+  </swiper-item>
+</swiper>
+<van-search value="{{ value }}" placeholder="请输入要查找的物品" shape="round" background="#ffb205" bind:change="onChange" bind:search="onSearch">
+  <!-- <view slot="action" bind:tap="onClick">搜索</view> -->
+</van-search>
+<view class="d-flex justify-content-center width100 mt-60">
+  <van-button round type="info">添加物品</van-button>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/warehouse/warehouse.wxml-->
+<view class="d-flex space-between">
+  <van-sidebar active-key="{{ activeKey }}" custom-class="height100vh bg-gray flex-1">
+    <van-sidebar-item title="{{item}}" wx:for="{{classList}}" />
+  </van-sidebar>
+  <view class="d-flex deriction-column flex-1">
+    <van-tabs active="{{ active }}" bind:change="onChange" custom-class="">
+      <van-tab title="{{item}}" wx:for="{{statusList}}">
+        <view class="d-flex space-between boderbox probox" wx:for="{{productList}}" wx:key="index">
+          <image class="proimg" src="{{item.proImg}}" mode="aspectFit" />
+          <view class="d-flex direction-column justify-content-start ml-4">
+            <view class="title">
+              {{item.name}}
+            </view>
+            <view class="text-red mt-10">
+              临期时间：{{item.expiration}}
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </van-tabs>
+
+  </view>
+</view>

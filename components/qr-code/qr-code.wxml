@@ -1,0 +1,4 @@
+<!--components/qr-code/qr-code.wxml-->
+<image src="{{qrcodeImg}}" style="width: 180px; height: 180px; " wx:if="{{qrcodeImg}}" />
+<canvas type="2d" style="width: 180px; height: 180px; " canvas-id="myQrcode" id="myQrcode" wx:else>
+</canvas>
