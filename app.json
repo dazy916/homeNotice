@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/warehouse/warehouse",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/add/add"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,24 +13,25 @@
   },
   "tabBar": {
     "color": "#333",
-    "selectedColor": "#67B7BF",
+    "selectedColor": "#33354e",
     "backgroundColor": "#fff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
-        "iconPath": "images/nav-home-line.png",
-        "selectedIconPath": "images/nav-home.png",
+        "iconPath": "images/home-1.png",
+        "selectedIconPath": "images/home.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/warehouse/warehouse",
-        "iconPath": "images/nav-tickets-line.png",
-        "selectedIconPath": "images/nav-tickets.png",
+        "iconPath": "images/warehouse-1.png",
+        "selectedIconPath": "images/warehouse.png",
         "text": "仓库"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "images/nav-my-line.png",
-        "selectedIconPath": "images/nav-my.png",
+        "iconPath": "images/my-1.png",
+        "selectedIconPath": "images/my.png",
         "text": "关于"
       }
     ]

@@ -1,29 +1,39 @@
-// pages/warehouse/warehouse.js
+// pages/add/add.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    classList: [{name:'食品',icon:'birthday-cake-o'},{name:'药品',icon:'flower-o'} , {name:'洗浴用品',icon:'user-circle-o'} , {name:'日用品',icon:'gift-card-o'}, {name:'卫生用品',icon:'manager-o'}],
-    statusList: ['正常', '临期', '过期'],
-    productList:[{
-      name:'123',
-      proImg:'https://img.yzcdn.cn/vant/cat.jpeg',
-      createDate:'2023-07-12',
-      shelflife:'300',
-      unit:1,
-      expiration:'2024-07-11'
-    },{
-      name:'123',
-      proImg:'https://img.yzcdn.cn/vant/cat.jpeg',
-      createDate:'2023-07-12',
-      shelflife:'300',
-      unit:1,
-      expiration:'2024-07-11'
-    }]
+    columns: [{
+      text: '食品',
+      value: 0
+    },
+    {
+      text: '药品',
+      value: 1
+    },
+    {
+      text: '洗漱用品',
+      value: 2
+    },
+    {
+      text: '日用品',
+      value: 3
+    }
+  ],
+  form:{
+    cardType:0
+  }
   },
-
+  cancel(){
+    wx.navigateBack({
+      delta: 1,
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,4 +1,7 @@
 /* pages/warehouse/warehouse.wxss */
+.sidebarbox{
+  background-color: #33354e;
+}
 .proimg{
   width: 180rpx;
   height: 180rpx;

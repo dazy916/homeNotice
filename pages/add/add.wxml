@@ -1,0 +1,25 @@
+<!--pages/add/add.wxml-->
+<view class="addbox">
+  <van-field label-class="text-black" input-class="width100" label="物品类型" placeholder="请选择物品类型" data-name="cardType" required error="{{errorData.cardType}}">
+    <van-dropdown-menu slot="input">
+      <van-dropdown-item value="{{ form.cardType }}" options="{{ columns }}" bind:change="changeCardType" />
+    </van-dropdown-menu>
+  </van-field>
+  <van-field type="number" value="{{ enterTicketNum }}" label="物品图片"  required use-input-slot custom-style="height: 200rpx;">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" slot="input" style="height: 100rpx;"/>
+  </van-field>
+  <van-field value="{{ username }}" label="物品名称" placeholder="请输入物品名称" required />
+  <van-field type="number" value="{{ phone }}" label="生产日期" placeholder="请输入生产日期" required />
+  <van-field type="number" value="{{ phone }}" label="保质期" placeholder="请输入保质期" required />
+  <van-field value="{{ enterTicketNum }}" label="数量" required use-input-slot>
+    <van-stepper value="{{ 1 }}" bind:change="onChange" slot="input" />
+  </van-field>
+  <van-field value="{{ username }}" label="物品储藏地址" placeholder="请输入物品储藏地址" required />
+  <van-field type="number" value="{{ enterTicketNum }}" label="物品储藏图片"  required use-input-slot custom-style="height: 200rpx;">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" slot="input" style="height: 100rpx;"/>
+  </van-field>
+  <view class="d-flex space-around bottombox">
+      <view class="numbtn d-flex justify-content-center align-items-center " bindtap="cancel">取消</view>
+      <view  class="d-flex justify-content-center align-items-center numbtn comfirme" bindtap="commitNum">确认</view>
+    </view>
+</view>

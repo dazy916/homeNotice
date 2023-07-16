@@ -1,0 +1,28 @@
+/* pages/add/add.wxss */
+page{
+  background-color: #33354e;
+}
+.addbox{
+  margin-top: 300rpx;
+  padding: 40rpx 0;
+  background-color: #fff;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  min-height: 70vh;
+}
+.numbtn{
+  width: 50%;
+  border: 1rpx solid #33354e;
+  color: #33354e;
+  height: 120rpx;
+  background-color: #fff;
+}
+.comfirme{
+  background-color: #33354e;
+  color: #fff;
+}
+.bottombox{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

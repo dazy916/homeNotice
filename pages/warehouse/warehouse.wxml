@@ -1,7 +1,9 @@
 <!--pages/warehouse/warehouse.wxml-->
 <view class="d-flex space-between">
-  <van-sidebar active-key="{{ activeKey }}" custom-class="height100vh bg-gray flex-1">
-    <van-sidebar-item title="{{item}}" wx:for="{{classList}}" />
+  <van-sidebar active-key="{{ activeKey }}" custom-class="height100vh bg-gray width-200 ">
+    <van-sidebar-item wx:for="{{classList}}" wx:key="index">
+     <view slot="title"><van-icon name="{{item.icon}}" /> {{item.name}}</view>
+    </van-sidebar-item>
   </van-sidebar>
   <view class="d-flex deriction-column flex-1">
     <van-tabs active="{{ active }}" bind:change="onChange" custom-class="">

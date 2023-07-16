@@ -1,4 +1,8 @@
 /**index.wxss**/
+page {
+  background-color: #33354e;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -14,18 +18,35 @@
   border-radius: 50%;
 }
 
-.topview{
+.topview {
   width: 100%;
   height: 200px;
   position: relative;
 }
-.banner{
+
+.banner {
   width: 100%;
   position: relative;
   z-index: 1;
-  height: 400rpx!important;
+  height: 400rpx !important;
 }
-.banner-item{
+
+.banner-item {
   width: 100%;
   height: 100%;
+}
+
+.addbtn {
+  position: fixed;
+  left: 50%;
+  bottom: 40rpx;
+  /* padding: 0 86rpx; */
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  color: #33354e;
+  background-color: #d7c1aa;
+  margin-left: -90rpx;
+  font-weight: bold;
+  box-shadow: 0rpx 3rpx 26rpx 4rpx rgb(24, 23, 26);
 }
