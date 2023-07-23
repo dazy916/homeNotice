@@ -1,2 +1,36 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!--pages/person/person.wxml-->
+<block wx:if="{{token}}">
+  <view class="my">
+    <view class="user-info">
+      <view class="userinfo-avatar">
+        <van-image round width="180rpx" height="180rpx" src="{{userInfo.pic }}" wx:if="{{userInfo.pic}}"/>
+        <van-image round width="180rpx" height="180rpx" src="{{avatar }}" wx:else/>
+        <!-- <open-data type="userAvatarUrl"></open-data> -->
+      </view>
+      <view class="username">
+        <van-row class="text-center white">
+          <van-col span="24">
+            {{ userInfo.name }}
+            {{ userInfo.phone }}
+          </van-col>
+          <van-col span="24" bindtap="goList">
+            <view class="align-items-center d-flex justify-content-center mt-2 ">
+             当前积分： {{ userInfo.integralBalance }} <view class="teangle-arrow"><view class="trangle"></view></view>
+            </view>
+          </van-col>
+        </van-row>
+      </view>
+    </view>
+  </view>
+  <view class="my-list">
+    <van-cell-group custom-class="ml-3 mr-3 fold" >
+      <van-cell i-class="custom-cell"  custom-class="mb-2" wx:for="{{myList}}" wx:key="index" data-url="{{item.url}}" data-title="{{item.title}}" bind:click="navigateTo">
+        <van-row slot="title" gutter="8">
+          <van-col>{{item.title}}</van-col>
+        </van-row>
+        <van-icon name="{{item.icon}}" slot="icon" size="24" class="mr-3" />
+      </van-cell>
+    </van-cell-group>
+  </view>
+</block>
+<i-toast id="toast" />

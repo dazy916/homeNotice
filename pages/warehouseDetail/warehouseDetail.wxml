@@ -1,0 +1,27 @@
+<!--pages/warehouseDetail/warehouseDetail.wxml-->
+<view class="overflowYAuto pb-70">
+  <van-image width="100%" height="238px" fit="cover" src="{{form.coverUrl}}" />
+  <view class="d-flex direction-column pl-2 pr-2 pt-2 pb-3 mb-3 bg-white">
+    <view class="size-32 font-bold text-hidden-2">{{ form.setMealName }}</view>
+  </view>
+  <!-- content -->
+  <view class="addbox">
+    <van-cell title="物品类型" value="内容" />
+    <van-cell title="生产日期" value="2023-03-12" />
+    <van-cell title="保质期" value="360" />
+    <van-cell title="数量" value="2" />
+    <van-cell title="物品储藏地址" value="内容内容内容" />
+    <van-cell title="物品储藏图片" value="内容" />
+    <view class="d-flex space-around bottombox">
+      <view class="numbtn d-flex justify-content-center align-items-center " bindtap="cancel">返回</view>
+      <view class="d-flex justify-content-center align-items-center numbtn comfirme" data-item="{{form.id}}" bindtap="edit">编辑</view>
+    </view>
+  </view>
+
+</view>
+<!-- 剧本选择弹窗 -->
+<van-action-sheet show="{{shareShow}}" title="剧本选择" :closeable="false" cancel-text="取消">
+  <view class="d-flex direction-column align-items-center lineheight-30">
+    <view wx:for="item in  form.playScripts" bindtap="selectSession(item)">{{ item.playName }}</view>
+  </view>
+</van-action-sheet>

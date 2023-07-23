@@ -5,13 +5,20 @@
     "compileHotReLoad": true,
     "urlCheck": false
   },
-  "libVersion": "2.33.0",
+  "libVersion": "3.0.0",
   "condition": {
     "miniprogram": {
       "list": [
         {
           "name": "",
           "pathName": "pages/warehouse/warehouse",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/warehouseDetail/warehouseDetail",
           "query": "",
           "launchMode": "default",
           "scene": null

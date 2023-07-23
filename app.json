@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/warehouse/warehouse",
     "pages/my/my",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/warehouseDetail/warehouseDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +33,7 @@
         "pagePath": "pages/my/my",
         "iconPath": "images/my-1.png",
         "selectedIconPath": "images/my.png",
-        "text": "关于"
+        "text": "我的"
       }
     ]
   },

@@ -1,15 +1,4 @@
-/* pages/add/add.wxss */
-page{
-  background-color: #33354e;
-}
-.addbox{
-  /* margin-top: 30rpx; */
-  padding: 40rpx 0;
-  background-color: #fff;
-  border-top-left-radius: 40rpx;
-  border-top-right-radius: 40rpx;
-  min-height: 70vh;
-}
+/* pages/warehouseDetail/warehouseDetail.wxss */
 .numbtn{
   width: 50%;
   border: 1rpx solid #33354e;

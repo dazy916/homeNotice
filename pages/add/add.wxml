@@ -1,4 +1,5 @@
 <!--pages/add/add.wxml-->
+<image src="../../images/w-bg.png" mode="aspectFit" style="height: 300rpx;"/>
 <view class="addbox">
   <van-field label-class="text-black" input-class="width100" label="物品类型" placeholder="请选择物品类型" data-name="cardType" required error="{{errorData.cardType}}">
     <van-dropdown-menu slot="input">
@@ -14,8 +15,8 @@
   <van-field value="{{ enterTicketNum }}" label="数量" required use-input-slot>
     <van-stepper value="{{ 1 }}" bind:change="onChange" slot="input" />
   </van-field>
-  <van-field value="{{ username }}" label="物品储藏地址" placeholder="请输入物品储藏地址" required />
-  <van-field type="number" value="{{ enterTicketNum }}" label="物品储藏图片"  required use-input-slot custom-style="height: 200rpx;">
+  <van-field value="{{ username }}" label="物品储藏地址" placeholder="请输入物品储藏地址"  />
+  <van-field type="number" value="{{ enterTicketNum }}" label="物品储藏图片"   use-input-slot custom-style="height: 200rpx;">
     <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" slot="input" style="height: 100rpx;"/>
   </van-field>
   <view class="d-flex space-around bottombox">
