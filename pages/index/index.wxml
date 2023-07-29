@@ -18,15 +18,41 @@
     </block>
   </view> 
 </view>-->
+<view class="topbox">
+<!-- swiper -->
 <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{dutation}}" current="{{current}}" bindanimationfinish="bannerChange">
   <swiper-item wx:for="{{imgUrls}}" wx:key="index">
-    <van-image class="banner-item" width="100%" height="400rpx" src="{{item.imageUrl}}" fit="cover" bind:click="imageLoad" data-item="{{item.linkUrl}}" />
+    <van-image class="banner-item" width="100%" height="600rpx" src="{{item.imageUrl}}" fit="cover" bind:click="imageLoad" data-item="{{item.linkUrl}}" />
   </swiper-item>
 </swiper>
-<van-search value="{{ value }}" placeholder="请输入要查找的物品" shape="round" background="#d7c1aa" bind:change="onChange" bind:search="onSearch">
-  <!-- <view slot="action" bind:tap="onClick">搜索</view> -->
-</van-search>
-<view class="d-flex justify-content-center direction-column align-items-center addbtn" bindtap="goAdd">
-  <van-icon name="add-o" size="30"/>
-  添加
+  <!-- <van-image class="banner-item" width="100%" height="600rpx" src="{{banner}}" fit="cover" /> -->
+  <!-- <view class="search d-flex justify-content-center">
+    <van-search value="{{ value }}" placeholder="请输入要查找的物品" shape="round" background="#33354e" bind:change="onChange" bind:search="onSearch" class="width100  overflow-hidden" />
+  </view> -->
 </view>
+
+
+<!-- <van-calendar show-title="{{false}}" poppable="{{ false }}" show-confirm="{{ false }}" color="#33354e" class="calendar" formatter="{{ formatter }}" /> -->
+
+<view class="d-flex margincenter width90 border8 overflow-hidden mt-3">
+  <view class="d-flex justify-content-center direction-column align-items-center width50 border-right p-4 boderbox white bg-blue" bindtap="goAdd">
+    <van-icon name="add-o" size="30" />添加
+  </view>
+  <view class="d-flex justify-content-center direction-column align-items-center width50  p-4 boderbox blue bg-yellow" bindtap="onSearch">
+    <van-icon name="search" size="30" />搜索
+  </view>
+</view>
+
+<!-- <view class="d-flex align-items-center boderbox width100 table bg-active">
+  <view class="sungrid">名称</view>
+  <view class="sungrid">临期时间</view>
+</view> -->
+<view class="margincenter width90 border8 overflow-hidden mt-3 bg-white shadowbox border-1">
+  <van-cell title="{{item.timeoutPeriod}}" is-link  wx:for="{{ mechanism }}" wx:key="index">
+    <view class=" warning">还剩{{item.timeoutPrice}}天</view>
+  </van-cell>
+</view>
+<!-- <view class="d-flex justify-content-center direction-column align-items-center addbtn" bindtap="goAdd">
+  <van-icon name="add-o" size="30" />
+  添加
+</view> -->

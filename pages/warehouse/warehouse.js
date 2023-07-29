@@ -21,6 +21,22 @@ Page({
       name: '卫生用品',
       icon: 'manager-o'
     }],
+    subClassList:[{
+      name: '蔬菜',
+      icon: 'birthday-cake-o'
+    }, {
+      name: '肉禽',
+      icon: 'flower-o'
+    }, {
+      name: '零食',
+      icon: 'user-circle-o'
+    }, {
+      name: '饮料',
+      icon: 'gift-card-o'
+    }, {
+      name: '粮油',
+      icon: 'manager-o'
+    }],
     statusList: ['正常', '临期', '过期'],
     productList: [{
       name: '123',

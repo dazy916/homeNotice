@@ -2,12 +2,17 @@
 <view class="d-flex space-between">
   <van-sidebar active-key="{{ activeKey }}" custom-class="height100vh bg-gray width-200 ">
     <van-sidebar-item wx:for="{{classList}}" wx:key="index">
-     <view slot="title"><van-icon name="{{item.icon}}" /> {{item.name}}</view>
+      <view slot="title">
+        <van-icon name="{{item.icon}}" /> {{item.name}}
+      </view>
     </van-sidebar-item>
   </van-sidebar>
-  <view class="d-flex deriction-column flex-1">
-    <van-tabs active="{{ active }}" bind:change="onChange" custom-class="">
+  <view class="d-flex deriction-column flex-1 mt-3">
+    <van-tabs active="{{ active }}" bind:change="onChange" title-active-color="#fff" color="#33354e" type="card">
       <van-tab title="{{item}}" wx:for="{{statusList}}">
+        <van-tabs active="{{ active }}" bind:change="onChange" title-active-color="#d7c1aa" color="#d7c1aa" ellipsis="{{false}}">
+          <van-tab title="{{item.name}}" wx:for="{{subClassList}}"></van-tab>
+        </van-tabs>
         <view class="d-flex space-between boderbox probox" wx:for="{{productList}}" wx:key="index" data-item="{{form.id}}" bindtap="goDetail">
           <image class="proimg" src="{{item.proImg}}" mode="aspectFit" />
           <view class="d-flex direction-column justify-content-start ml-4">

@@ -1,8 +1,24 @@
 /**index.wxss**/
 page {
-  background-color: #33354e;
+  /* background-color: #33354e; */
+  background-color: #f3f3f3;
+  font-size: 28rpx;
 }
-
+.topbox{
+  position: relative;
+  width: 100vw;
+  height: 600rpx;
+  border-bottom-left-radius: 75rpx;
+  border-bottom-right-radius: 75rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx 1rpx rgb(88, 88, 88);
+}
+.search{
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+  z-index: 10;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -28,7 +44,7 @@ page {
   width: 100%;
   position: relative;
   z-index: 1;
-  height: 400rpx !important;
+  height: 600rpx !important;
 }
 
 .banner-item {
@@ -38,15 +54,21 @@ page {
 
 .addbtn {
   position: fixed;
-  left: 50%;
-  bottom: 40rpx;
+  right: 5rpx;
+  bottom: 10rpx;
   /* padding: 0 86rpx; */
-  width: 180rpx;
-  height: 180rpx;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 50%;
   color: #33354e;
   background-color: #d7c1aa;
-  margin-left: -90rpx;
+  /* margin-left: -70rpx; */
   font-weight: bold;
   box-shadow: 0rpx 3rpx 26rpx 4rpx rgb(24, 23, 26);
+}
+.calendar {
+  --calendar-height:92vh;
+}
+.shadowbox{
+  /* box-shadow:0rpx 0rpx 9rpx 0rpx rgb(138, 138, 138); */
 }
